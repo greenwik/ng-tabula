@@ -1,0 +1,63 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="mainlayout">
+  <mat-toolbar class="main_toolBar">
+    <span>
+      <div class="toggle-icon">
+        <button type="button" mat-button (click)="drawer.toggle()">
+          <mat-icon svgIcon="menu"></mat-icon>
+        </button>
+      </div>
+    </span>
+    <span>Awesome Chart</span>
+  </mat-toolbar>
+  <mat-drawer-container class="example-container">
+    <mat-drawer #drawer class="example-sidenav" mode="over">
+
+      <!-- <mat-toolbar class="sidenav_tool">
+        <span class="tIcon"><mat-icon svgIcon="multi_chart"></mat-icon></span>
+        <span>Chart Types</span>
+      </mat-toolbar> -->
+
+      <mat-accordion class="side_expansion">
+        <mat-expansion-panel >
+          <mat-expansion-panel-header>
+            Pie Chart
+          </mat-expansion-panel-header>
+          <mat-nav-list class="listChart">
+              <a mat-list-item routerLink="">Half Pie</a>
+             <a mat-list-item routerLink="">Full Pie</a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+        <mat-expansion-panel >
+            <mat-expansion-panel-header>
+              Bar chart
+            </mat-expansion-panel-header>
+            <mat-nav-list class="listChart">
+               <a mat-list-item routerLink="">Simple Bar</a>
+               <a mat-list-item routerLink="">Mixed Bar</a>
+            </mat-nav-list>
+
+        </mat-expansion-panel>
+        <mat-expansion-panel >
+            <mat-expansion-panel-header>
+              Line Chart
+            </mat-expansion-panel-header>
+        </mat-expansion-panel>
+        <mat-expansion-panel >
+            <mat-expansion-panel-header>
+              Gauges
+            </mat-expansion-panel-header>
+            <mat-nav-list class="listChart">
+               <a mat-list-item routerLink="/solidGauge">Solid Gauge</a>
+            </mat-nav-list>
+
+        </mat-expansion-panel>
+      </mat-accordion>
+
+    </mat-drawer>
+
+    <div class="chart-content">
+        <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-container>
+</div>

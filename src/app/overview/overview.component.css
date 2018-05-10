@@ -1,0 +1,8 @@
+.overView{
+  align-items: center;
+  justify-content: center;
+}
+
+.overView p{
+  float: center;
+}

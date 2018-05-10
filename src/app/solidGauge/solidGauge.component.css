@@ -1,0 +1,33 @@
+chart {
+  display:block;
+  background-color: #fff;
+}
+
+.changeVal{
+  position: absolute;
+}
+.chartDiv{
+  width:75vw;
+   height:25vh;
+  background-color: #fff;
+
+}
+
+.chartDivLayout{
+  height:100%;
+  background-color: #fff;
+  /* align-items: center; */
+  justify-content: center;
+}
+mat-grid-tile {
+  background: #fff;
+  /* height:65%; */
+}
+
+.example-form {
+  width: 60%;
+}
+
+.example-full-width {
+  width: 100%;
+}

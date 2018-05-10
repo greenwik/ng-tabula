@@ -1,0 +1,25 @@
+<div class="chartDivLayout">
+  <!-- <chart [options]="gauge"></chart> -->
+  <mat-grid-list cols="4">
+    <mat-grid-tile class="chartDiv" colspan="3">
+
+        <chart [options]="gauge" (load)="saveInstance($event.context)"></chart>
+
+    </mat-grid-tile>
+    <mat-grid-tile  class="changeVal" colspan="1">
+      <form class="example-form">
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Change Value (0 to 200)" [(ngModel)]="value" name="valOption">
+        </mat-form-field>
+        <button type="button" mat-button (click)="changeValue()">
+            <mat-icon svgIcon="rightArrow"></mat-icon>Redraw Gauge
+        </button>
+      </form>
+
+    </mat-grid-tile>
+
+</mat-grid-list>
+
+
+</div>
