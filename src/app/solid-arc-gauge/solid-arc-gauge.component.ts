@@ -3,12 +3,18 @@ import {DomSanitizer} from '@angular/platform-browser';
 import {MatIconRegistry} from '@angular/material';
 
 @Component({
-  selector: 'app-chart',
-  templateUrl: './solidGauge.component.html',
-  styleUrls: ['./solidGauge.component.css']
+  selector: 'app-solid-arc-gauge',
+  templateUrl: './solid-arc-gauge.component.html',
+  styleUrls: ['./solid-arc-gauge.component.css']
 })
-export class SolidGaugeComponent implements OnInit {
-  // @Input() value: string= "0";
+export class SolidArcGaugeComponent implements OnInit {
+
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    iconRegistry.addSvgIcon(
+        'rightArrow',
+        sanitizer.bypassSecurityTrustResourceUrl('assets/rightArrow.svg'));
+  }
+
   @Input() value:string;
   public chartInst: any;
   // {"series":[{"setData":function(data:any){ return null;}}],
@@ -19,14 +25,14 @@ export class SolidGaugeComponent implements OnInit {
               type: 'solidgauge'
             },
             title: {
-              text:"Solid Gauge",
+              text:"Solid Arc Gauge",
               y:10
             },
             pane: {
-              center: ['50%', '50%'],
+              //center: ['50%'],
               size: '100%',
-              startAngle: -90,
-              endAngle: 90,
+              startAngle: -120,
+              endAngle: 120,
               background: {
                 backgroundColor:'#EEE',
                 innerRadius: '60%',
@@ -48,11 +54,12 @@ export class SolidGaugeComponent implements OnInit {
               stops: [
                   [0.1, '#55BF3B'], // green
                   [0.5, '#DDDF0D'], // yellow
-                  [0.9, '#DF5353'] // red
+                  [0.8, '#DF5353'] // red
               ],
               lineWidth: 0,
               minorTickInterval: null,
               tickAmount: 0,
+
               labels: {
                 y: 16
               }
@@ -60,15 +67,18 @@ export class SolidGaugeComponent implements OnInit {
             plotOptions: {
               solidgauge: {
                 dataLabels: {
-                  y: 5,
+                  y: 0,
                   borderWidth: 0,
                   useHTML: true
                 }
+                // linecap: 'round',
+                // stickyTracking: false,
+                // rounded: true
               }
             },
             series: [{
-              name: 'speed',
-              data: [80],
+              name: '',
+              data: [140],
               dataLabels: {
                 format: '<div style="text-align:center"><span style="font-size:25px;color:black">{y}</span><br/>' +
                    '<span style="font-size:12px;color:silver">km/h</span></div>'
@@ -78,12 +88,6 @@ export class SolidGaugeComponent implements OnInit {
               }
             }]
           };
-
-  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
-    iconRegistry.addSvgIcon(
-        'rightArrow',
-        sanitizer.bypassSecurityTrustResourceUrl('assets/rightArrow.svg'));
-  }
 
   changeValue(){
     this.gauge.series[0].data = [parseInt(this.value)];
@@ -102,12 +106,5 @@ export class SolidGaugeComponent implements OnInit {
   ngOnInit() {
   this.gauge = this.gauge;
   }
-
-  // onResize(event) {
-  //   console.log("width: ",event.target.innerWidth);
-  //   console.log("height: ",event.target.innerHeight);
-  //   //this.chartInst.setSize(300, 300);
-  // }
-
 
 }

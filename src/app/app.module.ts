@@ -15,6 +15,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+// import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -25,6 +26,9 @@ import { HighchartsStatic } from 'angular2-highcharts/dist/HighchartsService';
 import { SolidGaugeComponent } from './solidGauge/solidGauge.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { OverviewComponent } from './overview/overview.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SolidArcGaugeComponent } from './solid-arc-gauge/solid-arc-gauge.component';
+import { ActivitySolidGaugeComponent } from './activity-solid-gauge/activity-solid-gauge.component';
 
 export function highchartsfactory() {
   const hc = require('highcharts');
@@ -39,7 +43,9 @@ export function highchartsfactory() {
   declarations: [
     AppComponent,
     SolidGaugeComponent,
-    OverviewComponent
+    OverviewComponent,
+    SolidArcGaugeComponent,
+    ActivitySolidGaugeComponent
   ],
   imports: [
     HttpClientModule,
@@ -56,7 +62,8 @@ export function highchartsfactory() {
     MatGridListModule,
     MatInputModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule.forRoot()
   ],
   providers: [
     {

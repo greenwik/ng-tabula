@@ -1,4 +1,5 @@
 <div class="chartDivLayout" >
+
   <div class="row" style="margin:0px;">
     <div class="col-12 col-sm-12 col-md-9" >
       <div class="chartDiv">
@@ -8,7 +9,13 @@
     <div class="col-12 col-sm-12 col-md-3">
       <form class="example-form">
         <mat-form-field>
-          <input matInput placeholder="Change Value (0 to 200)" [(ngModel)]="value" name="valOption">
+          <input matInput placeholder="Outer Gauge (0 to 100)" [(ngModel)]="value.outer" name="valOption0" value="">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Middle Gauge (0 to 100)" [(ngModel)]="value.middle" name="valOption1" value="">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Inner Gauge (0 to 100)" [(ngModel)]="value.inner" name="valOption2" value="">
         </mat-form-field>
         <div class="row">
           <button type="button" mat-button (click)="changeValue()">
