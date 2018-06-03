@@ -33,7 +33,7 @@
 .example-sidenav {
   /* padding-left: 1px;
   padding-right: 1px; */
-    width:15vw;
+    width:auto;
 
 }
 .side_expansion{

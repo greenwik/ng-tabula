@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import{ HttpClientModule } from '@angular/common/http';
-
+import { ChartDataService } from './chart-data.service';
 
 import { AppComponent } from './app.component';
 //import material animation
@@ -29,9 +29,15 @@ import { OverviewComponent } from './overview/overview.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SolidArcGaugeComponent } from './solid-arc-gauge/solid-arc-gauge.component';
 import { ActivitySolidGaugeComponent } from './activity-solid-gauge/activity-solid-gauge.component';
+import { BasicLineChartComponent } from './basic-line-chart/basic-line-chart.component';
+import { TimeSeriesChartComponent } from './time-series-chart/time-series-chart.component';
+import { IrRegularTimeChartComponent } from './ir-regular-time-chart/ir-regular-time-chart.component';
+import { InvertedAxisChartComponent } from './inverted-axis-chart/inverted-axis-chart.component';
+import { DynamicLineGraphComponent } from './dynamic-line-graph/dynamic-line-graph.component';
 
 export function highchartsfactory() {
   const hc = require('highcharts');
+  window['highCharts'] = hc;
   const hcm = require('highcharts/highcharts-more');
   const sg = require('highcharts/modules/solid-gauge');
   hcm(hc);
@@ -45,7 +51,12 @@ export function highchartsfactory() {
     SolidGaugeComponent,
     OverviewComponent,
     SolidArcGaugeComponent,
-    ActivitySolidGaugeComponent
+    ActivitySolidGaugeComponent,
+    BasicLineChartComponent,
+    TimeSeriesChartComponent,
+    IrRegularTimeChartComponent,
+    InvertedAxisChartComponent,
+    DynamicLineGraphComponent
   ],
   imports: [
     HttpClientModule,
@@ -69,7 +80,8 @@ export function highchartsfactory() {
     {
      provide: HighchartsStatic,
      useFactory: highchartsfactory
-    }
+   },
+   ChartDataService
   ],
   bootstrap: [AppComponent]
 })
