@@ -100,6 +100,9 @@ export class DynamicLineGraphComponent implements OnInit,OnDestroy {
     }
     saveInstance(chartInstance): void {
       this.chartInst = chartInstance;
+      this.timer = Observable.timer(2000,1000);
+        // subscribing to a observable returns a subscription object
+        this.sub = this.timer.subscribe(t => this.addPoint());
     }
     updateSeriesData(data:any): void {
       //console.log(this.chart);
@@ -108,9 +111,7 @@ export class DynamicLineGraphComponent implements OnInit,OnDestroy {
 
     ngOnInit() {
       this.line = this.line;
-      this.timer = Observable.timer(2000,1000);
-        // subscribing to a observable returns a subscription object
-        this.sub = this.timer.subscribe(t => this.addPoint());
+
     }
 
     addPoint():void{
@@ -120,7 +121,7 @@ export class DynamicLineGraphComponent implements OnInit,OnDestroy {
         this.chartInst.series[0].addPoint([x, y], true, true);
       }
     }
-    
+
     ngOnDestroy(){
         console.log("Destroy timer");
         // unsubscribe here

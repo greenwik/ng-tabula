@@ -88,6 +88,7 @@ export class TimeSeriesChartComponent implements OnInit {
     }
     saveInstance(chartInstance): void {
       this.chartInst = chartInstance;
+      this.getData();
     }
     updateSeriesData(data:any): void {
       //console.log(this.chart);
@@ -97,7 +98,7 @@ export class TimeSeriesChartComponent implements OnInit {
     ngOnInit() {
      this.line = this.line;
      //console.log("color",window['highCharts'].getOptions().colors[0]);
-      this.getData();
+      //this.getData();
     }
 
     getData():void {
