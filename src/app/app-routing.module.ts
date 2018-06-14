@@ -10,6 +10,16 @@ import { DynamicLineGraphComponent } from './dynamic-line-graph/dynamic-line-gra
 import { InvertedAxisChartComponent } from './inverted-axis-chart/inverted-axis-chart.component';
 import { IrRegularTimeChartComponent } from './ir-regular-time-chart/ir-regular-time-chart.component';
 import { TimeSeriesChartComponent } from './time-series-chart/time-series-chart.component';
+import { PieChartDrilldownComponent } from './pie-chart-drilldown/pie-chart-drilldown.component';
+import { SemiPieChartComponent } from './semi-pie-chart/semi-pie-chart.component';
+import { PieChartGradientfillComponent } from './pie-chart-gradientfill/pie-chart-gradientfill.component';
+import { PieChartLegendComponent } from './pie-chart-legend/pie-chart-legend.component';
+import { DrillDownColumnComponent } from './drill-down-column/drill-down-column.component';
+import { NegativeBarComponent } from './negative-bar/negative-bar.component';
+import { RangeColumnComponent } from './range-column/range-column.component';
+import { RotatedColumnComponent } from './rotated-column/rotated-column.component';
+import { SimpleBarComponent } from './simple-bar/simple-bar.component';
+import { SimpleColumnComponent } from './simple-column/simple-column.component';
 
 const routes: Routes = [
   { path: 'overview', component: OverviewComponent },
@@ -21,7 +31,17 @@ const routes: Routes = [
   { path: 'dynamicLine', component: DynamicLineGraphComponent },
   { path: 'invertedLine', component: InvertedAxisChartComponent },
   { path: 'irRegulatTimeLine', component: IrRegularTimeChartComponent },
-  { path: 'timeSeriesLine', component: TimeSeriesChartComponent }
+  { path: 'timeSeriesLine', component: TimeSeriesChartComponent },
+  { path: 'pieDrillChart', component: PieChartDrilldownComponent },
+  { path: 'pieLegendChart', component: PieChartLegendComponent },
+  { path: 'pieGradientChart', component: PieChartGradientfillComponent },
+  { path: 'semiPieChart', component: SemiPieChartComponent },
+  { path: 'simpleBar', component: SimpleBarComponent },
+  { path: 'negativeBar', component: NegativeBarComponent },
+  { path: 'simpleColumn', component: SimpleColumnComponent },
+  { path: 'RotatedColumn', component: RotatedColumnComponent },
+  { path: 'drillDownColumn', component: DrillDownColumnComponent },
+  { path: 'rangeColumn', component: RangeColumnComponent }
 ];
 
 @NgModule({

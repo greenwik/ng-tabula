@@ -24,7 +24,7 @@ import { ChartModule } from 'angular2-highcharts';
 import * as highcharts from 'highcharts';
 import { HighchartsStatic } from 'angular2-highcharts/dist/HighchartsService';
 import { SolidGaugeComponent } from './solidGauge/solidGauge.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { OverviewComponent } from './overview/overview.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SolidArcGaugeComponent } from './solid-arc-gauge/solid-arc-gauge.component';
@@ -34,6 +34,16 @@ import { TimeSeriesChartComponent } from './time-series-chart/time-series-chart.
 import { IrRegularTimeChartComponent } from './ir-regular-time-chart/ir-regular-time-chart.component';
 import { InvertedAxisChartComponent } from './inverted-axis-chart/inverted-axis-chart.component';
 import { DynamicLineGraphComponent } from './dynamic-line-graph/dynamic-line-graph.component';
+import { PieChartLegendComponent } from './pie-chart-legend/pie-chart-legend.component';
+import { SemiPieChartComponent } from './semi-pie-chart/semi-pie-chart.component';
+import { PieChartDrilldownComponent } from './pie-chart-drilldown/pie-chart-drilldown.component';
+import { PieChartGradientfillComponent } from './pie-chart-gradientfill/pie-chart-gradientfill.component';
+import { SimpleBarComponent } from './simple-bar/simple-bar.component';
+import { NegativeBarComponent } from './negative-bar/negative-bar.component';
+import { SimpleColumnComponent } from './simple-column/simple-column.component';
+import { RotatedColumnComponent } from './rotated-column/rotated-column.component';
+import { DrillDownColumnComponent } from './drill-down-column/drill-down-column.component';
+import { RangeColumnComponent } from './range-column/range-column.component';
 
 export function highchartsfactory() {
   const hc = require('highcharts');
@@ -56,7 +66,17 @@ export function highchartsfactory() {
     TimeSeriesChartComponent,
     IrRegularTimeChartComponent,
     InvertedAxisChartComponent,
-    DynamicLineGraphComponent
+    DynamicLineGraphComponent,
+    PieChartLegendComponent,
+    SemiPieChartComponent,
+    PieChartDrilldownComponent,
+    PieChartGradientfillComponent,
+    SimpleBarComponent,
+    NegativeBarComponent,
+    SimpleColumnComponent,
+    RotatedColumnComponent,
+    DrillDownColumnComponent,
+    RangeColumnComponent
   ],
   imports: [
     HttpClientModule,
