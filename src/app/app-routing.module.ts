@@ -20,6 +20,11 @@ import { RangeColumnComponent } from './range-column/range-column.component';
 import { RotatedColumnComponent } from './rotated-column/rotated-column.component';
 import { SimpleBarComponent } from './simple-bar/simple-bar.component';
 import { SimpleColumnComponent } from './simple-column/simple-column.component';
+import { SimpleAreaComponent } from './simple-area/simple-area.component';
+import { NegativeAreaComponent } from './negative-area/negative-area.component';
+import { InvertedAreaComponent } from './inverted-area/inverted-area.component';
+import { SplineAreaComponent } from './spline-area/spline-area.component';
+import { RangeLineAreaComponent } from './range-line-area/range-line-area.component';
 
 const routes: Routes = [
   { path: 'overview', component: OverviewComponent },
@@ -41,7 +46,12 @@ const routes: Routes = [
   { path: 'simpleColumn', component: SimpleColumnComponent },
   { path: 'RotatedColumn', component: RotatedColumnComponent },
   { path: 'drillDownColumn', component: DrillDownColumnComponent },
-  { path: 'rangeColumn', component: RangeColumnComponent }
+  { path: 'rangeColumn', component: RangeColumnComponent },
+  { path: 'simpleArea', component: SimpleAreaComponent },
+  { path: 'negativeArea', component: NegativeAreaComponent },
+  { path: 'invertedArea', component: InvertedAreaComponent },
+  { path: 'splineArea', component: SplineAreaComponent },
+  { path: 'rangeLineArea', component: RangeLineAreaComponent }
 ];
 
 @NgModule({

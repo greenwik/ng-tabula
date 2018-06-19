@@ -44,9 +44,15 @@
   padding:5px;
 }
 
-.listChart a{
+.chartList a{
   font-size: 14px;
 }
 .mainlayout{
   height:100%;
+}
+
+.main_toolBar a{
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }

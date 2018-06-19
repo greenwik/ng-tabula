@@ -44,6 +44,11 @@ import { SimpleColumnComponent } from './simple-column/simple-column.component';
 import { RotatedColumnComponent } from './rotated-column/rotated-column.component';
 import { DrillDownColumnComponent } from './drill-down-column/drill-down-column.component';
 import { RangeColumnComponent } from './range-column/range-column.component';
+import { SimpleAreaComponent } from './simple-area/simple-area.component';
+import { NegativeAreaComponent } from './negative-area/negative-area.component';
+import { InvertedAreaComponent } from './inverted-area/inverted-area.component';
+import { SplineAreaComponent } from './spline-area/spline-area.component';
+import { RangeLineAreaComponent } from './range-line-area/range-line-area.component';
 
 export function highchartsfactory() {
   const hc = require('highcharts');
@@ -76,7 +81,12 @@ export function highchartsfactory() {
     SimpleColumnComponent,
     RotatedColumnComponent,
     DrillDownColumnComponent,
-    RangeColumnComponent
+    RangeColumnComponent,
+    SimpleAreaComponent,
+    NegativeAreaComponent,
+    InvertedAreaComponent,
+    SplineAreaComponent,
+    RangeLineAreaComponent
   ],
   imports: [
     HttpClientModule,
