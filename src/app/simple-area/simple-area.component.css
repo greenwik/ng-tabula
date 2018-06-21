@@ -1,0 +1,53 @@
+chart {
+  display:block;
+  background-color: #fff;
+}
+
+/* .changeVal{
+  /* position: absolute;
+  align-items: center;
+  justify-content: center;
+} */
+
+.chartDiv{
+  /* width:75vw;
+   height:60vh;
+  background-color: #fff; */
+  align-items: center;
+  margin-top:50px;
+}
+
+.chartDivLayout{
+  height:100%;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+/* mat-grid-tile {
+  background: #fff;
+  /* height:65%;
+} */
+
+/* .example-form {
+  width: 60%;
+  height:100%;
+
+} */
+
+/* .example-full-width {
+  width: 100%;
+} */
+
+.row{
+  /* margin-top: 10px; */
+  align-items: center;
+  /*justify-content: center; */
+}
+.example-form{
+  margin-left:0px;
+}
+.example-full-width{
+  /* position: relative;
+  align-items: center;
+  justify-content: center; */
+}

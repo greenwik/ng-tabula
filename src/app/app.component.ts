@@ -20,6 +20,10 @@ export class AppComponent {
           'multi_chart',
           sanitizer.bypassSecurityTrustResourceUrl('assets/multi_chart.svg'));
 
+      iconRegistry.addSvgIcon(
+              'home',
+              sanitizer.bypassSecurityTrustResourceUrl('assets/home.svg'));
+
     }
 
 }
